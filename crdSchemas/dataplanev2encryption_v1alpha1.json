@@ -1,0 +1,39 @@
+{
+  "description": "DataplaneV2Encryption describes the specification to be used for node-to-node encryption.",
+  "properties": {
+    "metadata": {
+      "properties": {
+        "name": {
+          "pattern": "^default$",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "additionalProperties": false
+    },
+    "spec": {
+      "description": "Spec is the desired configuration for node-to-node encryption.",
+      "properties": {
+        "enabled": {
+          "description": "Enable node-to-node encryption.",
+          "type": "boolean"
+        },
+        "type": {
+          "description": "Type of encryption to be used.",
+          "enum": [
+            "Wireguard"
+          ],
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "enabled"
+      ],
+      "type": "object",
+      "additionalProperties": false
+    }
+  },
+  "type": "object"
+}
