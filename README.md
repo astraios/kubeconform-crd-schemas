@@ -14,6 +14,10 @@ kubeconform -summary -output json \
   path/to/your/manifests
 ```
 
+## Convert CRDs
+
+Use https://github.com/datreeio/CRDs-catalog/tree/main?tab=readme-ov-file#crd-extractor
+
 ## Credits
 
 Huge thanks to
